@@ -19,12 +19,11 @@ def perform() -> bytes:
         with open(file, 'rb') as f:
             for line in f.readlines():
                 words = line.split(b" ")
-                for w in words:
+                for i, w in enumerate(words):
                     if PASSWORD_TXT in w:
-                        return w
+                        return words[i + 1]  # The password is a string: ["Paswword:","canufindthis"]
 
     return b"no-data"
-
 
 
 if __name__ == '__main__':
