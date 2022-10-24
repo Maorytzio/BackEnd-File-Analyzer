@@ -1,0 +1,4 @@
+{
+    "analyze_result": "{\"top_10_files\": {\"/theHarvester/theHarvester-master/wordlists/dns-big.txt\": 1821398, \"/theHarvester/theHarvester-master/wordlists/names_small.txt\": 406279, \"/theHarvester/theHarvester-master/theHarvester/lib/ip-ranges.json\": 193710, \"/theHarvester/theHarvester-master/theHarvester/lib/core.py\": 40858, \"/theHarvester/theHarvester-master/theHarvester/__main__.py\": 36078, \"/theHarvester/theHarvester-master/Pipfile.lock\": 34663, \"/theHarvester/theHarvester-master/theHarvester/lib/resolvers.txt\": 29331, \"/theHarvester/theHarvester-master/theHarvester-logo.png\": 19544, \"/theHarvester/theHarvester-master/README/COPYING\": 15216, \"/theHarvester/theHarvester-master/theHarvester/lib/stash.py\": 15155}, \"file_types\": {\".txt\": 10, \".json\": 1, \".py\": 64, \".lock\": 1, \".png\": 1, \".md\": 2, \".yaml\": 2, \".ini\": 1, \".cfg\": 1}}",
+    "password_result": "password:"
+}

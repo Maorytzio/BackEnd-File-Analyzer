@@ -1,0 +1,49 @@
+version: "3.3"
+services:
+
+  redis_service:
+    container_name: redis
+    image: redis:6.2-alpine
+    command: redis-server
+
+    networks:
+      - control_net
+      - password_net
+      - analyze_net
+
+  controller_module:
+    container_name: controller
+    image: controller_module:latest
+    depends_on:
+      - "redis_service"
+      - "password_module"
+      - "analyze_module"
+    networks:
+      - control_net
+    volumes:
+      - .\output:/output
+
+  password_module:
+    container_name: password
+    image: password_module:latest
+    depends_on:
+      - "redis_service"
+    volumes:
+      - .\theHarvester:/theHarvester
+    networks:
+      - password_net
+
+  analyze_module:
+    container_name: analyze
+    image: analyze_module:latest
+    depends_on:
+      - "redis_service"
+    volumes:
+      - .\theHarvester:/theHarvester
+    networks:
+      - analyze_net
+
+networks:
+  control_net:
+  password_net:
+  analyze_net:
